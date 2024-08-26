@@ -1,3 +1,9 @@
+/*
+Write a program that uses a nested switch statement to print out the day of the week based on an 
+integer input (1 for Monday, 2 for Tuesday, etc.). Additionally, within each day, print whether it 
+is a weekday or weekend. 
+*/
+
 import java.util.Scanner;
 
 public class Question2 {
@@ -19,5 +25,6 @@ public class Question2 {
             default: System.out.println("Input Integer from 1-7"); break;
             
         }
+        sc.close();
     }
 }

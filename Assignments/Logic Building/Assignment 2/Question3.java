@@ -1,3 +1,9 @@
+/*
+Write a program that acts as a simple calculator. It should accept two numbers and an operator 
+(+, -, *, /) as input. Use a switch statement to perform the appropriate operation. Use nested if
+else to check if division by zero is attempted and display an error message. 
+*/
+
 import java.util.Scanner;
 
 public class Question3 {
@@ -44,6 +50,7 @@ public class Question3 {
             default: System.out.println("Invalid Input");
             break;
         }
+        sc.close();
 
     }
 }
