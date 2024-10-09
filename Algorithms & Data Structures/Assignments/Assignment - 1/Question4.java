@@ -1,33 +1,38 @@
 import java.util.*;
-public class Question1 {
 
-    public static double checkArmstrongNumber(int n) { // Time Complexity: O(log n), Space Complexity: O(log n)
-        
-        if(n == 0)
-        return 0;
+public class Question4 {
 
-        return Math.pow(n%10,3) + checkArmstrongNumber(n/10);
+    public static int fib(int n) { // Time Complexity: O(2^n), Space Complexity: O(n)
+        if(n <= 1) 
+            return n;
+
+        return fib(n-1) + fib(n-2);   
     }
+
+    public static void printSeries(int n) {
+        for(int i=0; i<n; i++) {
+            System.out.print(fib(i)+" ");
+        }
+        System.out.println();
+    }
+    
     public static void main(String[] args) {
+        
         int choice;
         Scanner sc = new Scanner(System.in);
         
         do {
-            System.out.println("Press 1 to check Armstrong Number");
+            System.out.println("\nPress 1 to print fibonacci series");
             System.out.println("Press 2 to exit the program");
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
 
             switch(choice) {
                 case 1: 
-                System.out.print("\nEnter a number: ");
+                System.out.print("\nEnter value of N: ");
                 int num = sc.nextInt();
-                if(checkArmstrongNumber(num) == num) {
-                    System.out.println("True: "+(int)checkArmstrongNumber(num)+ " is an Armstrong Number\n");
-                }
-                else {
-                    System.out.println("False: "+num+ " is not an Armstrong Number\n");
-                }
+
+                printSeries(num);
                 break;
 
                 case 2: 

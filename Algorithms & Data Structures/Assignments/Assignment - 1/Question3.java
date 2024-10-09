@@ -1,27 +1,21 @@
 import java.util.*;
-public class Question2 {
 
-    public static boolean checkPrime(int n, int divisor) { // Time Complexity: O(n), Space Complexity: O(n)
-        if (divisor == 1) {
-            return true;
+public class Question3 {
+
+    public static int factorial( int n) { // Time Complexity: O(n), Space Complexity: O(n)
+        if(n == 0 || n == 1) {
+            return 1;
         }
-        else {
-           if (n % divisor == 0) {
-             return false;
-           }
-           else {
-             return checkPrime(n, divisor-1);
-           } 
-        }       
+
+        return n * factorial(n-1);
     }
-    
-     
     public static void main(String[] args) {
+        
         int choice;
         Scanner sc = new Scanner(System.in);
         
         do {
-            System.out.println("Press 1 to check Prime Number");
+            System.out.println("Press 1 to find factorial");
             System.out.println("Press 2 to exit the program");
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
@@ -31,12 +25,7 @@ public class Question2 {
                 System.out.print("\nEnter a number: ");
                 int num = sc.nextInt();
 
-                if(checkPrime(num, num/2)) {
-                    System.out.println("True: "+num+" is a prime number\n");
-                }
-                else {
-                    System.out.println("False: "+num+" is not a prime number\n");
-                }
+                System.out.println("Factorial of "+num+ " is: "+factorial(num)+"\n");
                 break;
 
                 case 2: 

@@ -1,33 +1,36 @@
 import java.util.*;
-public class Question1 {
 
-    public static double checkArmstrongNumber(int n) { // Time Complexity: O(log n), Space Complexity: O(log n)
-        
-        if(n == 0)
-        return 0;
+public class Question9 {
 
-        return Math.pow(n%10,3) + checkArmstrongNumber(n/10);
+    public static boolean integerPalindrome(int num) { // Time Complexity: O(n), Space Complexity: O(n)
+
+        String numStr = Integer.toString(num);
+        for(int i=0; i<numStr.length()/2; i++) {
+            if(numStr.charAt(i) != numStr.charAt(numStr.length() - i- 1)) {
+                return false;
+            }
+        }
+        return true;
+
     }
     public static void main(String[] args) {
+        
         int choice;
         Scanner sc = new Scanner(System.in);
         
         do {
-            System.out.println("Press 1 to check Armstrong Number");
+            System.out.println("\nPress 1 to enter a integer");
             System.out.println("Press 2 to exit the program");
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
+            sc.nextLine();
 
             switch(choice) {
                 case 1: 
-                System.out.print("\nEnter a number: ");
+                System.out.print("\nEnter a Integer: ");
                 int num = sc.nextInt();
-                if(checkArmstrongNumber(num) == num) {
-                    System.out.println("True: "+(int)checkArmstrongNumber(num)+ " is an Armstrong Number\n");
-                }
-                else {
-                    System.out.println("False: "+num+ " is not an Armstrong Number\n");
-                }
+
+                System.out.println("Is the Integer a Palindrome: " + integerPalindrome(num));
                 break;
 
                 case 2: 
