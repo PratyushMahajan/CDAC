@@ -1,0 +1,30 @@
+Assignment - 2
+Introducing Relational Databases.
+
+
+1. Which field of the Customers table is the primary key?  
+   - Answer: CNUM  
+   - Reason:
+     A primary key is used to uniquely identify each row in a table. In the CUSTOMERS table, the CNUM field is the primary key because each customer has a unique number in that column.
+
+2. What is the 4th column of the Customers table?  
+   - Answer: RATING  
+   - Reason: The columns in the CUSTOMERS table are:  
+     1. CNUM  
+     2. CNAME  
+     3. CITY  
+     4. RATING  
+     So, the fourth column is RATING.
+
+3. What is another word for row? For column?  
+   - Answer:  
+     - Another word for row is record.  
+     - Another word for column is field.  
+   
+     In a database, a row (or record) holds data about one thing, like one customer’s information. A column (or field) holds the same type of data for all rows, such as names or ratings.
+
+4. Why isn’t it possible to see the first five rows of a table?  
+
+     - Tables in SQL don’t have a fixed order unless we use an order by clause. Without sorting, we can’t say which rows come first.  
+     - Also, if a query doesn’t use a limit clause, the result might show more or fewer than five rows, or the whole table. That’s why we can’t always see exactly the first five rows.  
+
