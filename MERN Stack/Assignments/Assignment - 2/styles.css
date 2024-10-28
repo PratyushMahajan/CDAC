@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    height: 100%; 
+    max-height: 4rem;
+    width: auto;
+    display: flex;
+    align-items: center; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    padding: 1rem 2rem;
+    background-color: white;
+    color: black;
+}
+
+.nav-links input[type=text] {
+    border: 1px;
+    font-size: 20px;
+    padding-left: 5px;
+    border-radius: 4px;
+  }
+
+.nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff4757;
+}
+
+.hero {
+    text-align: center;
+    background-color: #1e272e;
+    color: white;
+    font-weight: bolder;
+    padding: 5rem 1rem;
+    background-image: url(https://t3.ftcdn.net/jpg/09/55/00/70/360_F_955007026_xFEcSGX9c39nVrUCAJEtZSeZgISQRlFT.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #ff6b81;
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 18rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 5px;
+}
+
+.card h3 {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.btn-secondary {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.btn-secondary:hover {
+    background-color: #4dafff;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #242526;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content hr {
+    margin: 1rem auto;
+    border: 0.5px solid #3a3b3c;
+    width: 90%;
+}
+
+.footer-logo {
+    height: 100%; 
+    max-height: 2rem;
+    width: auto;
+    display: flex;
+    align-items: center; 
+    background-color: white;
+}
+
+.social-icons img{
+     height: 40px;
+     width: 40px;
+     margin-top: 30px;
+     margin-left: 10px;
+     margin-right: 10px;
+     margin-bottom: 30px;
+}
