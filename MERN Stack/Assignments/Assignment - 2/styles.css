@@ -26,6 +26,41 @@ body {
     color: black;
 }
 
+/* #ham {
+    padding: 1.5rem 2rem;
+    background-color: white;
+    color: black;
+}
+
+.checkbtn {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-list {
+    display: none;
+}
+
+#check:checked ~ .nav-list {
+    display: block;
+}
+
+.nav-list {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    background: white;
+    z-index: 1;
+    width: 200px;
+}
+
+.nav-list a {
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: block;
+} */
+
 .nav-links input[type=text] {
     border: 1px;
     font-size: 20px;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Styler</title>
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: #f7c183; 
+        }
+        
+        .container {
+            width: 80%;
+            margin-top: 9%;
+            margin-left: 9%;
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paragraph</h1>
+        <p id="paragraph">
+            It is rightly said that being disciplined is essential in life. 
+            When a person leads a disciplined life, they set an easy path to success. 
+            They will develop an approach to happiness and a beautiful future ahead.
+            Being disciplined is the practice of having a scheduled daily routine which helps an individual to be punctual and hard-working. 
+            An individual is taught what being disciplined means from the time they are young. 
+            Even though discipline takes a lot of effort, the advantages of a disciplined life make it a worthwhile endeavour.
+        </p>
+        <button id="changeStyleBtn">Change Style</button>
+        <button id="undoStyleBtn">Undo Change</button>
+
+        <script>
+
+            const paragraph = document.getElementById("paragraph");
+            const button = document.getElementById("changeStyleBtn");
+            const button2 = document.getElementById("undoStyleBtn");
+            
+            button2.style.display = "none";
+
+            button.addEventListener("click", () => {
+                paragraph.style.fontFamily = "Courier New, monospace";
+                paragraph.style.fontSize = "24px";
+                paragraph.style.color = "rgb(139,0,0)"; 
+
+                button2.style.display = "inline-block";
+            });
+
+            button2.addEventListener("click", () => {
+                paragraph.style.fontFamily = "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+                paragraph.style.fontSize = "18px";
+                paragraph.style.color = "rgb(0,0,0)"; 
+            });          
+
+        </script>
+    </div>
+</body>
+</html>

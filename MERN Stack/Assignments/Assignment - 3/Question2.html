@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            margin-right: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form">
+        <h2 style="color: rgb(36, 15, 6);">User Information Form</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <input type="text" id="firstName" name="firstName" required placeholder="First Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="lastName" name="lastName" required placeholder="Last Name">
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="contactNo" name="contactNo" required placeholder="Contact Number">
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder="Email Address">
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+
+        document.getElementById('userForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const contactNo = document.getElementById('contactNo').value;
+            const email = document.getElementById('email').value;
+
+            const output = document.getElementById('output');
+            <!-- output.innerHTML = `
+                <h3>Submitted Information-</h3>
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Contact No:</strong> ${contactNo}</p>
+                <p><strong>Email ID:</strong> ${email}</p>
+            `; -->
+
+        });
+    </script>
+
+</body>
+</html>
