@@ -1,5 +1,5 @@
 const express = require('express');
-const { getJobs, createJob, updateJob, deleteJob } = require('../controllers/job_list_controller');
+const { getJobs, createJob, updateJob, deleteJob, getJobByID } = require('../controllers/job_list_controller');
 
 //router object
 const router =  express.Router();
@@ -7,6 +7,9 @@ const router =  express.Router();
 //routes
 // GET ALL JOB LIST || GET
 router.get('/getall', getJobs);
+
+// GET JOB BY ID
+router.get('/get/:id', getJobByID);
 
 // CREATE JOB || POST
 router.post('/create', createJob);

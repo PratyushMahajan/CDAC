@@ -3,6 +3,7 @@ const colors = require('colors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
 const mySQLPool = require('./config/db');
+const cors = require('cors');
 
 //configure dotenv
 dotenv.config();
@@ -10,9 +11,12 @@ dotenv.config();
 //rest object
 const app = express();
 
+
 //middlewares
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(cors());
+app.use(express.static('public'));
 
 //routes
 app.use('/api/v1/jobs', require("./routes/job_portal_routes"));

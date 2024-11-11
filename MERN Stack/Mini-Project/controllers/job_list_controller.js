@@ -3,7 +3,8 @@ const db = require("../config/db");
 // GET ALL JOB LIST
 const getJobs = async(req, res) => {
     try {
-        const data = await db.query('SELECT * from jobpost');
+        const data = await db.query('SELECT Job_ID, Role, Company, Location, Primary_Skills, Eligibility, DATE_FORMAT(LastDateToApply, "%Y-%m-%d") AS LastDatetoApply, CTC FROM jobpost');
+
         if(!data) {
             return res.status(404).send({
                 success:false,
@@ -22,6 +23,38 @@ const getJobs = async(req, res) => {
         res.status(500).send({
             success:false,
             message:"Error in Get All Jobs API",
+            error
+        });
+    }
+};
+
+// GET JOB BY ID
+const getJobByID = async(req, res) => {
+    try {
+        const jobID = req.params.id;
+        if(!jobID) {
+            return res.status(404).send({
+                success:false,
+                message:"Invalid or Provide Job ID"
+            });
+        }
+        const data = await db.query(`SELECT Job_ID, Role, Company, Location, Primary_Skills, Eligibility, DATE_FORMAT(LastDateToApply, "%Y-%m-%d") AS LastDatetoApply, CTC FROM jobpost WHERE Job_ID = ?`, [jobID]);
+        if(!data) {
+            return res.status(404).send({
+                success:false,
+                message:"No Record found"
+            });
+        }
+        res.status(200).send({
+            success:true,
+            jobDetails:data[0]
+        });
+    }
+    catch(error) {
+        console.log(error);
+        res.status(500).send({
+            success:false,
+            message:"Error in getting Job by ID API",
             error
         });
     }
@@ -120,4 +153,4 @@ const deleteJob = async(req, res) => {
     }
 };
 
-module.exports = {getJobs, createJob, updateJob, deleteJob};
+module.exports = {getJobs, getJobByID, createJob, updateJob, deleteJob};
