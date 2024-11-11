@@ -33,6 +33,10 @@
                 <div class="col-lg-8">
                     <form class="row g-3">
                         <div class="col-md-6">
+                            <label for="role" class="form-label">Job ID</label>
+                            <input type="number" class="form-control" id="jobid" placeholder="e.g. 4534" required>
+                        </div>
+                        <div class="col-md-6">
                             <label for="role" class="form-label">Role</label>
                             <input type="text" class="form-control" id="role" placeholder="e.g. Software Engineer" required>
                         </div>
@@ -53,8 +57,12 @@
                             <input type="text" class="form-control" id="ctc" placeholder="e.g. 10 LPA" required>
                         </div>
                         <div class="col-md-6">
-                            <label for="ctc" class="form-label">Criteria</label>
-                            <input type="text" class="form-control" id="ctc" placeholder="e.g. B.Tech/B.E 2024 Batch" required>
+                            <label for="ctc" class="form-label">Eligibility</label>
+                            <input type="text" class="form-control" id="eligibility" placeholder="e.g. B.Tech/B.E 2024 Batch" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="role" class="form-label">Last date to apply</label>
+                            <input type="date" class="form-control" id="lastdate"  required>
                         </div>
                         <div class="col-12 d-flex justify-content-center">
                             <button type="submit" class="btn" style="margin-top: 15px;">Post Job</button>
